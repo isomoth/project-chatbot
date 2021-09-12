@@ -1,4 +1,4 @@
-# Peppbot: A cheerful chat companion
+# Pep bot: A cheerful chat companion
 
 This is a bot that asks about the user's mood and offers different activities based on it. 
 
