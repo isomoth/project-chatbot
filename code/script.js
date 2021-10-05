@@ -10,17 +10,9 @@ const chat = document.getElementById('chat'),
 // This function adds a chat bubble in the correct place based on who the sender is
 
 const showMessage = (message, sender) => {
+  // Disable the start button once the chatbot has started talking
+  startButton.setAttribute('disabled', true);
   if (sender === 'user') {
-
-    // Isabel's console.log (just as a test)
-
-    console.log(message)
-    console.log(sender)
-
-    // Nina's console.log (just as a test)
-
-    console.log('kind of getting this')
-    console.log(`This is my message: ${message}`)
 
     chat.innerHTML +=
 
@@ -176,6 +168,8 @@ const handleSadActivity = (userAnswer) => {
   } else {
     showMessage(`OK, I understand. I\'m here if you need me! Take care.`, 'bot')
   }
+  //Turn off the dropdown menu after doing the selection
+  select.setAttribute('disabled', true);
 }
 
 const handleNeutralActivity = (userAnswer) => {
@@ -190,6 +184,7 @@ const handleNeutralActivity = (userAnswer) => {
   } else {
     showMessage('Gotcha! I\'m here if you change your mind 😊', 'bot')
   }
+  select.setAttribute('disabled', true);
 }
 
 const handleWorriedActivity = () => {
@@ -204,6 +199,7 @@ const handleWorriedActivity = () => {
   } else {
     showMessage(`OK, I understand. I\'m here if you need me. Sending you a big hug!`, 'bot')
   }
+  select.setAttribute('disabled', true);
 }
 
 const handleHappyActivity = () => {
@@ -218,6 +214,7 @@ const handleHappyActivity = () => {
   } else {
     showMessage('Alright! I\'m here if you change your mind 😊 Enjoy your day!', 'bot')
   }
+  select.setAttribute('disabled', true);
 }
 
 // Event Listeners
